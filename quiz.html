@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="quiz.css">
+ 
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="quiz-header">
+            <h1 class="quiz-title">Knowledge Quiz</h1>
+            <p class="quiz-subtitle">Test your knowledge with these interesting questions!</p>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="progress-text">
+                <span id="questionNumber">Question 1 of 10</span>
+                <span id="timeDisplay"></span>
+            </div>
+        </div>
+
+        <div class="score-display" id="scoreDisplay">
+            Score: 0/10
+        </div>
+
+        <div class="question-container" id="questionContainer">
+            <div class="question" id="question"></div>
+            <div class="answers" id="answers"></div>
+        </div>
+
+        <div class="controls">
+            <button class="btn btn-secondary" id="prevBtn" onclick="previousQuestion()" disabled>Previous</button>
+            <button class="btn btn-primary" id="nextBtn" onclick="nextQuestion()" disabled>Next Question</button>
+        </div>
+
+        <div class="results" id="results">
+            <div class="final-score" id="finalScore"></div>
+            <div class="score-message" id="scoreMessage"></div>
+            
+            <div class="quiz-stats">
+                <div class="stat-item">
+                    <span class="stat-number" id="correctAnswers">0</span>
+                    <span class="stat-label">Correct</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="incorrectAnswers">0</span>
+                    <span class="stat-label">Incorrect</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" id="accuracyRate">0%</span>
+                    <span class="stat-label">Accuracy</span>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button class="btn btn-primary" onclick="restartQuiz()">Take Quiz Again</button>
+            </div>
+        </div>
+    </div>
+    <script src="quiz.js"></script>
+ 
+</body>
+</html>
